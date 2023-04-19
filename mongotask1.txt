@@ -1,0 +1,514 @@
+zenClassProgram> show collections
+attendance
+codekata
+company_drives
+mentors
+task
+topics
+user
+zenClassProgram> db.topics.insertMany([
+...     {
+...         "topic":"javascript",
+...         "period":"september",
+...     },
+...     {
+...         "topic":"HTML",
+...
+...         "period":"september",
+...     },
+...     {
+...         "topic":"CSS",
+...         "period":"october",
+...     },
+...     {
+...         "topic":"DOM",
+...         "period":"october",
+...     },
+...     {
+...         "topic":"Bootstrap",
+...         "period":"october",
+...     },
+...     {
+...         "topic":"React",
+...         "period":"november",
+...     },
+...     {
+...         "topic":"SQL",
+...         "period":"november",
+...     },
+...     {
+...         "topic":"MongoDB",
+...         "period":"december",
+...     },
+...     {
+...         "topic":"Nodejs",
+...         "period":"december",
+...     },
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63f4d4c3b4e54bdc64440192"),
+    '1': ObjectId("63f4d4c3b4e54bdc64440193"),
+    '2': ObjectId("63f4d4c3b4e54bdc64440194"),
+    '3': ObjectId("63f4d4c3b4e54bdc64440195"),
+    '4': ObjectId("63f4d4c3b4e54bdc64440196"),
+    '5': ObjectId("63f4d4c3b4e54bdc64440197"),
+    '6': ObjectId("63f4d4c3b4e54bdc64440198"),
+    '7': ObjectId("63f4d4c3b4e54bdc64440199"),
+    '8': ObjectId("63f4d4c3b4e54bdc6444019a")
+  }
+}
+zenClassProgram> db.topics.find({period:"october"}).forEach(function(topic){print(topic.topic)})
+CSS
+DOM
+Bootstrap
+
+zenClassProgram> db.task.insertMany([
+...     {
+...         "task":"task 1 - javascript basic",
+...         "duration":"september",
+...     },
+...     {
+...         "task":"task 2 - javascript Array",
+...         "duration":"september",
+...     },
+...     {
+...         "task":"task 3 - javascript Object",
+...         "duration":"september",
+...     },
+...     {
+...         "task":"task 4 - javascript DOM",
+...         "duration":"september",
+...     },
+...     {
+...         "task":"task 5 - Advance javascript ",
+...         "duration":"october",
+...     },
+...     {
+...         "task":"task 6 - HTML Tags",
+...         "duration":"october",
+...     },
+...     {
+...         "task":"task 7 - HTML elements",
+...         "duration":"october",
+...     },
+...     {
+...         "task":"task 8 - HTML forms",
+...         "duration":"october",
+...     },
+...     {
+...         "task":"task 9 - CSS Inline",
+...         "duration":"october",
+...     },
+...     {
+...         "task":"task 10 - CSS Internal",
+...         "duration":"october",
+...     },
+...     {
+...         "task":"task 11 - CSS External",
+...         "duration":"october",
+...     },
+...     {
+...         "task":"task 12 - bootstrap",
+...         "duration":"october",
+...     },
+...     {
+...         "task":"task 13 - API Call",
+...         "duration":"november",
+...     },
+...     {
+...         "task":"task 14 - Cards",
+...         "duration":"november",
+...     },
+...     {
+...         "task":"task 15 - webcode",
+...         "duration":"november",
+...     },
+...     {
+...         "task":"task 16 - React",
+...         "duration":"november",
+...     },
+...     {
+...         "task":"task 17 - SQL",
+...         "duration":"december",
+...     },
+...     {
+...         "task":"task 18 - MongoDB",
+...         "duration":"december",
+...     },
+...     {
+...         "task":"task 19 - Nodejs",
+...         "duration":"december",
+...     },
+...     {
+...         "task":"task 20 - Project",
+...         "duration":"december",
+...     },
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63f4d59db4e54bdc6444019b"),
+    '1': ObjectId("63f4d59db4e54bdc6444019c"),
+    '2': ObjectId("63f4d59db4e54bdc6444019d"),
+    '3': ObjectId("63f4d59db4e54bdc6444019e"),
+    '4': ObjectId("63f4d59db4e54bdc6444019f"),
+    '5': ObjectId("63f4d59db4e54bdc644401a0"),
+    '6': ObjectId("63f4d59db4e54bdc644401a1"),
+    '7': ObjectId("63f4d59db4e54bdc644401a2"),
+    '8': ObjectId("63f4d59db4e54bdc644401a3"),
+    '9': ObjectId("63f4d59db4e54bdc644401a4"),
+    '10': ObjectId("63f4d59db4e54bdc644401a5"),
+    '11': ObjectId("63f4d59db4e54bdc644401a6"),
+    '12': ObjectId("63f4d59db4e54bdc644401a7"),
+    '13': ObjectId("63f4d59db4e54bdc644401a8"),
+    '14': ObjectId("63f4d59db4e54bdc644401a9"),
+    '15': ObjectId("63f4d59db4e54bdc644401aa"),
+    '16': ObjectId("63f4d59db4e54bdc644401ab"),
+    '17': ObjectId("63f4d59db4e54bdc644401ac"),
+    '18': ObjectId("63f4d59db4e54bdc644401ad"),
+    '19': ObjectId("63f4d59db4e54bdc644401ae")
+  }
+}
+zenClassProgram> db.task.find({duration:"october"}).forEach((Task)=>{print(Task.task)})
+task 5 - Advance javascript
+task 6 - HTML Tags
+task 7 - HTML elements
+task 8 - HTML forms
+task 9 - CSS Inline
+task 10 - CSS Internal
+task 11 - CSS External
+task 12 - bootstrap
+
+zenClassProgram> db.company_drives.insertMany([
+...     {
+...     "Comp_name":"google",
+...     "interview_date":"18-sep-2020"
+...     },
+...     {
+...         "Comp_name":"paypal",
+...         "interview_date":"22-sep-2020"
+...      },
+...     {
+...       "Comp_name":"amazon",
+...        "interview_date":"28-sep-2020"
+...     },
+...     {
+...     "Comp_name":"uber",
+...     "interview_date":"30-sep-2020"
+...     },
+...     {
+...     "Comp_name":"Cognizent",
+...     "interview_date":"02-oct-2020"
+...     },
+...     {
+...     "Comp_name":"ola",
+...     "interview_date":"08-oct-2020"
+...     },
+...     {
+...     "Comp_name":"wipro",
+...     "interview_date":"12-oct-2020"
+...     },
+...     {
+...     "Comp_name":"TCS",
+...     "interview_date":"18-oct-2020"
+...     },
+...     {
+...     "Comp_name":"Accenture",
+...     "interview_date":"26-oct-2020"
+...     },
+...     {
+...     "Comp_name":"freshworks",
+...     "interview_date":"2-nov-2020"
+...     },
+...     {
+...         "Comp_name":"juspay",
+...         "interview_date":"18-nov-2020"
+...      },
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63f4d6a2b4e54bdc644401af"),
+    '1': ObjectId("63f4d6a2b4e54bdc644401b0"),
+    '2': ObjectId("63f4d6a2b4e54bdc644401b1"),
+    '3': ObjectId("63f4d6a2b4e54bdc644401b2"),
+    '4': ObjectId("63f4d6a2b4e54bdc644401b3"),
+    '5': ObjectId("63f4d6a2b4e54bdc644401b4"),
+    '6': ObjectId("63f4d6a2b4e54bdc644401b5"),
+    '7': ObjectId("63f4d6a2b4e54bdc644401b6"),
+    '8': ObjectId("63f4d6a2b4e54bdc644401b7"),
+    '9': ObjectId("63f4d6a2b4e54bdc644401b8"),
+    '10': ObjectId("63f4d6a2b4e54bdc644401b9")
+  }
+}
+zenClassProgram> db.company_drives.find({interview_date:{$gt:"15-oct-2020",$lt:"31-oct-2020"}})
+[
+  {
+    _id: ObjectId("63f4d87eb4e54bdc644401c0"),
+    Comp_name: 'wipro',
+    interview_date: '18-oct-2020'
+  },
+  {
+    _id: ObjectId("63f4d87eb4e54bdc644401c1"),
+    Comp_name: 'TCS',
+    interview_date: '19-oct-2020'
+  },
+  {
+    _id: ObjectId("63f4d87eb4e54bdc644401c2"),
+    Comp_name: 'Accenture',
+    interview_date: '20-oct-2020'
+  },
+  {
+    _id: ObjectId("63f4d87eb4e54bdc644401c3"),
+    Comp_name: 'freshworks',
+    interview_date: '22-oct-2020'
+  },
+  {
+    _id: ObjectId("63f4d87eb4e54bdc644401c4"),
+    Comp_name: 'juspay',
+    interview_date: '26-oct-2020'
+  }
+]
+zenClassProgram>db.company_drives.find()
+[
+  {
+    _id: ObjectId("63f4d87eb4e54bdc644401ba"),
+    Comp_name: 'google',
+    interview_date: '01-oct-2020'
+  },
+  {
+    _id: ObjectId("63f4d87eb4e54bdc644401bb"),
+    Comp_name: 'paypal',
+    interview_date: '03-oct-2020'
+  },
+  {
+    _id: ObjectId("63f4d87eb4e54bdc644401bc"),
+    Comp_name: 'amazon',
+    interview_date: '7-oct-2020'
+  },
+  {
+    _id: ObjectId("63f4d87eb4e54bdc644401bd"),
+    Comp_name: 'uber',
+    interview_date: '12-oct-2020'
+  },
+  {
+    _id: ObjectId("63f4d87eb4e54bdc644401be"),
+    Comp_name: 'Cognizent',
+    interview_date: '15-oct-2020'
+  },
+  {
+    _id: ObjectId("63f4d87eb4e54bdc644401bf"),
+    Comp_name: 'ola',
+    interview_date: '15-oct-2020'
+  },
+  {
+    _id: ObjectId("63f4d87eb4e54bdc644401c0"),
+    Comp_name: 'wipro',
+    interview_date: '18-oct-2020'
+  },
+  {
+    _id: ObjectId("63f4d87eb4e54bdc644401c1"),
+    Comp_name: 'TCS',
+    interview_date: '19-oct-2020'
+  },
+  {
+    _id: ObjectId("63f4d87eb4e54bdc644401c2"),
+    Comp_name: 'Accenture',
+    interview_date: '20-oct-2020'
+  },
+  {
+    _id: ObjectId("63f4d87eb4e54bdc644401c3"),
+    Comp_name: 'freshworks',
+    interview_date: '22-oct-2020'
+  },
+  {
+    _id: ObjectId("63f4d87eb4e54bdc644401c4"),
+    Comp_name: 'juspay',
+    interview_date: '26-oct-2020'
+  }
+]
+zenClassProgram> db.users.insertMany([
+...     {
+...         "user_id":1,
+...         "name":"salahudeen",
+...         "email":"salah123@gmail.com",
+...         "batch":"B42WD",
+...         "Gender":"male",
+...         "course":"fullstack developer",
+...         "codeKata":212,
+...         "placement":true
+...      },
+...      {
+...         "user_id":2,
+...          "name":"sanjay",
+...          "email":"sanjay123@gmail.com",
+...          "batch":"B42WD",
+...          "Gender":"male",
+...          "course":"fullstack developer",
+...          "codeKata":232,
+...          "placement":true
+...       },
+...       {
+...         "user_id":3,
+...          "name":"nivetha",
+...          "email":"nivetha123@gmail.com",
+...          "batch":"B42WD",
+...          "Gender":"female",
+...          "course":"fullstack developer",
+...          "codeKata":220,
+...          "placement":false
+...       },
+...       {
+...         "user_id":4,
+...          "name":"sharmila",
+...          "email":"sharmila123@gmail.com",
+...          "batch":"B42WD",
+...          "Gender":"female",
+...          "course":"fullstack developer",
+...          "codeKata":160,
+...          "placement":true
+...       },
+...       {
+...         "user_id":5,
+...          "name":"jayavel",
+...          "email":"jayavel123@gmail.com",
+...          "batch":"B42WD",
+...          "Gender":"male",
+...          "course":"fullstack developer",
+...          "codeKata":130,
+...          "placement":false
+...       },
+...       {
+...         "user_id":6,
+...          "name":"mathiyazhagan",
+...          "email":"mathiyazhagan123@gmail.com",
+...          "batch":"B42WD",
+...          "Gender":"male",
+...          "course":"fullstack developer",
+...          "codeKata":130,
+...          "placement":false
+...       }
+...
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63f4da4cb4e54bdc644401c5"),
+    '1': ObjectId("63f4da4cb4e54bdc644401c6"),
+    '2': ObjectId("63f4da4cb4e54bdc644401c7"),
+    '3': ObjectId("63f4da4cb4e54bdc644401c8"),
+    '4': ObjectId("63f4da4cb4e54bdc644401c9"),
+    '5': ObjectId("63f4da4cb4e54bdc644401ca")
+  }
+}
+zenClassProgram>db.users.find({placement:true})
+[
+  {
+    _id: ObjectId("63f4da4cb4e54bdc644401c5"),
+    user_id: 1,
+    name: 'salahudeen',
+    email: 'salah123@gmail.com',
+    batch: 'B42WD',
+    Gender: 'male',
+    course: 'fullstack developer',
+    codeKata: 212,
+    placement: true
+  },
+  {
+    _id: ObjectId("63f4da4cb4e54bdc644401c6"),
+    user_id: 2,
+    name: 'sanjay',
+    email: 'sanjay123@gmail.com',
+    batch: 'B42WD',
+    Gender: 'male',
+    course: 'fullstack developer',
+    codeKata: 232,
+    placement: true
+  },
+  {
+    _id: ObjectId("63f4da4cb4e54bdc644401c8"),
+    user_id: 4,
+    name: 'sharmila',
+    email: 'sharmila123@gmail.com',
+    batch: 'B42WD',
+    Gender: 'female',
+    course: 'fullstack developer',
+    codeKata: 160,
+    placement: true
+  }
+]
+zenClassProgram> db.users.find({}).forEach((user)=>{print(user.codeKata)})
+212
+232
+220
+160
+130
+130
+
+zenClassProgram> db.mentors.find({"mentee's_count":{$gt:15}})
+[
+  {
+    _id: ObjectId("63f4db57b4e54bdc644401cb"),
+    name: 'sanjay',
+    age: 26,
+    gender: 'male',
+    "mentee's_count": 38
+  },
+  {
+    _id: ObjectId("63f4db57b4e54bdc644401cd"),
+    name: 'Akbar Basha',
+    age: 32,
+    gender: 'male',
+    "mentee's_count": 52
+  }
+]
+zenClassProgram>db.attendance.find({attendance: 'present'})
+[
+  {
+    _id: ObjectId("63f4d42db4e54bdc6444018c"),
+    name: 'salahudeen',
+    batch: 'B42WD',
+    Gender: 'male',
+    course: 'fullstack developer',
+    attendance: 'present'
+  },
+  {
+    _id: ObjectId("63f4d42db4e54bdc6444018d"),
+    name: 'sanjay',
+    batch: 'B42WD',
+    Gender: 'male',
+    course: 'fullstack developer',
+    attendance: 'present'
+  },
+  {
+    _id: ObjectId("63f4d42db4e54bdc6444018e"),
+    name: 'nivetha',
+    batch: 'B42WD',
+    Gender: 'female',
+    course: 'fullstack developer',
+    attendance: 'present'
+  },
+  {
+    _id: ObjectId("63f4d42db4e54bdc64440191"),
+    name: 'mathiyazhagan',
+    batch: 'B42WD',
+    Gender: 'male',
+    course: 'fullstack developer',
+    attendance: 'present'
+  }
+]
+zenClassProgram>db.task.find({duration:{$gt:"15 oct-2020",$lt:"31 oct-2020"}}).forEach((Task)=>{print(Task.task)})
+task 11 - CSS External
+task 12 - bootstrap
+task 13 - API Call
+task 14 - Cards
+task 15 - webcode
+task 16 - React
+task 17 - SQL
+task 18 - MongoDB
+task 19 - Nodejs
+task 20 - Project
+
+zenClassProgram>
